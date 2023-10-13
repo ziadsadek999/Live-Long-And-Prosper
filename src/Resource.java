@@ -7,11 +7,14 @@ public class Resource {
 
     private int delayRequest;
 
-    public Resource(String initialValue, String unitPrice, String amountRequest, String delayRequest) {
+    private ResourceType type;
+
+    public Resource(String initialValue, String unitPrice, String amountRequest, String delayRequest, ResourceType type) {
         this.initialValue = Integer.parseInt(initialValue);
         this.unitPrice = Integer.parseInt(unitPrice);
         this.amountRequest = Integer.parseInt(amountRequest);
         this.delayRequest = Integer.parseInt(delayRequest);
+        this.type = type;
     }
 
     public int getInitialValue() {
@@ -28,6 +31,10 @@ public class Resource {
 
     public int getDelayRequest() {
         return delayRequest;
+    }
+
+    public ResourceType getType() {
+        return this.type;
     }
 
     public String toString() {
