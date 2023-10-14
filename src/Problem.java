@@ -1,23 +1,17 @@
 public class Problem {
 
-    private Resource food;
-    private Resource materials;
-    private Resource energy;
-    private boolean visualize;
-    private int initialProsperity;
-    private Strategy strategy;
+    private final Resource food;
+    private final Resource materials;
+    private final Resource energy;
+    private final boolean visualize;
+    private final int initialProsperity;
+    private final Strategy strategy;
 
-    private Build build1;
+    private final Build build1;
 
-    private Build build2;
+    private final Build build2;
 
     public Problem(String initialState, String strategy, boolean visualize) {
-        parseInitialState(initialState);
-        this.visualize = visualize;
-        this.strategy = Strategy.valueOf(strategy);
-    }
-
-    private void parseInitialState(String initialState) {
         String[] splitString = initialState.split(";");
         String[][] deepSplitString = new String[splitString.length][];
         for (int i = 0; i < splitString.length; i++) {
@@ -29,6 +23,8 @@ public class Problem {
         energy = new Resource(deepSplitString[1][2], deepSplitString[2][2], deepSplitString[5][0], deepSplitString[5][1], ResourceType.ENERGY);
         build1 = new Build(deepSplitString[6][0], deepSplitString[6][1], deepSplitString[6][2], deepSplitString[6][3], deepSplitString[6][4]);
         build2 = new Build(deepSplitString[7][0], deepSplitString[7][1], deepSplitString[7][2], deepSplitString[7][3], deepSplitString[7][4]);
+        this.visualize = visualize;
+        this.strategy = Strategy.valueOf(strategy);
     }
 
     public String solve() {
@@ -38,17 +34,16 @@ public class Problem {
         return plan + ";" + cost + ";" + nodesExpanded;
     }
 
-
     public String toString() {
-        StringBuilder output = new StringBuilder();
-        output.append("Initial Prosperity: " + initialProsperity + "\n");
-        output.append("Strategy: " + strategy + "\n");
-        output.append("Visualize: " + visualize + "\n");
-        output.append("Food:\n" + food + "\n");
-        output.append("Material:\n" + materials + "\n");
-        output.append("Energy:\n" + energy + "\n");
-        output.append("Build 1:\n" + build1 + "\n");
-        output.append("Build 2:\n" + build2 + "\n");
-        return output.toString();
+        String output = "";
+        output += "Initial Prosperity: " + initialProsperity + "\n";
+        output += "Strategy: " + strategy + "\n";
+        output += "Visualize: " + visualize + "\n";
+        output += "Food:\n" + food + "\n";
+        output += "Material:\n" + materials + "\n";
+        output += "Energy:\n" + energy + "\n";
+        output += "Build 1:\n" + build1 + "\n";
+        output += "Build 2:\n" + build2 + "\n";
+        return output;
     }
 }

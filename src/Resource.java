@@ -1,13 +1,13 @@
 public class Resource {
 
-    private int initialValue;
-    private int unitPrice;
+    private final int initialValue;
+    private final int unitPrice;
 
-    private int amountRequest;
+    private final int amountRequest;
 
-    private int delayRequest;
+    private final int delayRequest;
 
-    private ResourceType type;
+    private final ResourceType type;
 
     public Resource(String initialValue, String unitPrice, String amountRequest, String delayRequest, ResourceType type) {
         this.initialValue = Integer.parseInt(initialValue);

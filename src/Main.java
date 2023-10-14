@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +8,7 @@ public class Main {
                 "13,14,15,16,17;" +
                 "18,19,20,21,22;";
         Problem problem = new Problem(init, "BF", true);
+        problem.solve();
         System.out.println(problem);
     }
 }

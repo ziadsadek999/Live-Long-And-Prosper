@@ -1,9 +1,21 @@
 public class PendingRequest {
-    ResourceType type;
-    int remainingTime;
+    private final Resource resource;
+    private int remainingTime;
 
-    public PendingRequest(ResourceType type, int remainingTime) {
-        this.type = type;
-        this.remainingTime = remainingTime;
+    public PendingRequest(Resource resource) {
+        this.resource = resource;
+        this.remainingTime = resource.getDelayRequest();
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public int getRemainingTime() {
+        return remainingTime;
+    }
+
+    public void decrementTime() {
+        this.remainingTime--;
     }
 }
