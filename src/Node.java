@@ -1,12 +1,12 @@
 public class Node {
-    private int prosperity;
-    private int food;
+    private final int prosperity;
+    private final int food;
 
-    private int material;
+    private final int material;
 
-    private int energy;
+    private final int energy;
 
-    private PendingRequest pendingRequest;
+    private final PendingRequest pendingRequest;
 
     public Node(int prosperity, int food, int material, int energy, PendingRequest pendingRequest) {
         this.prosperity = prosperity;
@@ -18,7 +18,6 @@ public class Node {
 
     public Node requestResource(Resource resource) {
         Node intermediate = acquireResource();
-        //Can acquire resource
         if (intermediate == null || intermediate.pendingRequest == null) {
             if (food == 0 || material == 0 || energy == 0) {
                 return null;
@@ -49,7 +48,7 @@ public class Node {
         int newMaterial = intermediate.material - buildType.getMaterialUse();
         int newEnergy = intermediate.energy - buildType.getEnergyUse();
         int newFood = intermediate.food - buildType.getFoodUse();
-        int newProsperity = intermediate.prosperity - buildType.getProsperity();
+        int newProsperity = intermediate.prosperity - buildType.getPrice();
         if (newMaterial >= 0 && newEnergy >= 0 && newFood >= 0 && newProsperity >= 0) {
             return new Node(newProsperity + buildType.getProsperity(), newFood, newMaterial, newEnergy, intermediate.pendingRequest);
         }

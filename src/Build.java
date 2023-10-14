@@ -1,9 +1,9 @@
 public class Build {
-    private int price;
-    private int foodUse;
-    private int materialUse;
-    private int energyUse;
-    private int prosperity;
+    private final int price;
+    private final int foodUse;
+    private final int materialUse;
+    private final int energyUse;
+    private final int prosperity;
 
     public Build(String price, String foodUse, String materialUse, String energyUse, String prosperity) {
         this.price = Integer.parseInt(price);

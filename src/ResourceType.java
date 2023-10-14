@@ -1,3 +1,3 @@
 public enum ResourceType {
-    FOOD, MATERIALS, ENERGY;
+    FOOD, MATERIALS, ENERGY
 }
