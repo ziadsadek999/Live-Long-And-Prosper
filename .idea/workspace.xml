@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/strategies/AStarOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/AStarTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/BreadthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/DepthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/GreedyOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/GreedyTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/IterativeDeepeningSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategies/UniformCostSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Build.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResourceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Build.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PendingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/PendingRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/GenericSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/ResourceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Strategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>

@@ -1,3 +1,5 @@
+package artifacts;
+
 public class Resource {
 
     private final int initialValue;

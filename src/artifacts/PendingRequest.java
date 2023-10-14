@@ -1,3 +1,5 @@
+package artifacts;
+
 public class PendingRequest {
     private final Resource resource;
     private int remainingTime;

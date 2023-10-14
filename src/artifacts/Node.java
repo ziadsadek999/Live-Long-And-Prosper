@@ -1,3 +1,5 @@
+package artifacts;
+
 public class Node {
     private final int prosperity;
     private final int food;
@@ -8,6 +10,7 @@ public class Node {
 
     private final PendingRequest pendingRequest;
 
+    
     public Node(int prosperity, int food, int material, int energy, PendingRequest pendingRequest) {
         this.prosperity = prosperity;
         this.food = food;
@@ -48,9 +51,8 @@ public class Node {
         int newMaterial = intermediate.material - buildType.getMaterialUse();
         int newEnergy = intermediate.energy - buildType.getEnergyUse();
         int newFood = intermediate.food - buildType.getFoodUse();
-        int newProsperity = intermediate.prosperity - buildType.getPrice();
-        if (newMaterial >= 0 && newEnergy >= 0 && newFood >= 0 && newProsperity >= 0) {
-            return new Node(newProsperity + buildType.getProsperity(), newFood, newMaterial, newEnergy, intermediate.pendingRequest);
+        if (newMaterial >= 0 && newEnergy >= 0 && newFood >= 0) {
+            return new Node(prosperity + buildType.getProsperity(), newFood, newMaterial, newEnergy, intermediate.pendingRequest);
         }
         return null;
     }

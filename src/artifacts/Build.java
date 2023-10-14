@@ -1,3 +1,5 @@
+package artifacts;
+
 public class Build {
     private final int price;
     private final int foodUse;

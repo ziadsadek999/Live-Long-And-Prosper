@@ -1,17 +1,21 @@
-public class Problem {
+package strategies;
 
-    private final Resource food;
-    private final Resource materials;
-    private final Resource energy;
-    private final boolean visualize;
-    private final int initialProsperity;
-    private final Strategy strategy;
+import artifacts.*;
 
-    private final Build build1;
+abstract public class GenericSearch {
 
-    private final Build build2;
+    protected final Resource food;
+    protected final Resource materials;
+    protected final Resource energy;
+    protected final boolean visualize;
+    protected final int initialProsperity;
+    protected final Strategy strategy;
 
-    public Problem(String initialState, String strategy, boolean visualize) {
+    protected final Build build1;
+
+    protected final Build build2;
+
+    public GenericSearch(String initialState, String strategy, boolean visualize) {
         String[] splitString = initialState.split(";");
         String[][] deepSplitString = new String[splitString.length][];
         for (int i = 0; i < splitString.length; i++) {
@@ -27,23 +31,19 @@ public class Problem {
         this.strategy = Strategy.valueOf(strategy);
     }
 
-    public String solve() {
-        String plan = "";
-        String cost = "";
-        String nodesExpanded = "";
-        return plan + ";" + cost + ";" + nodesExpanded;
-    }
+    abstract public String solve();
+
 
     public String toString() {
         String output = "";
         output += "Initial Prosperity: " + initialProsperity + "\n";
-        output += "Strategy: " + strategy + "\n";
+        output += "artifacts.Strategy: " + strategy + "\n";
         output += "Visualize: " + visualize + "\n";
         output += "Food:\n" + food + "\n";
         output += "Material:\n" + materials + "\n";
         output += "Energy:\n" + energy + "\n";
-        output += "Build 1:\n" + build1 + "\n";
-        output += "Build 2:\n" + build2 + "\n";
+        output += "artifacts.Build 1:\n" + build1 + "\n";
+        output += "artifacts.Build 2:\n" + build2 + "\n";
         return output;
     }
 }
