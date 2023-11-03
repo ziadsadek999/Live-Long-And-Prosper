@@ -7,10 +7,9 @@ public class Node {
     private final int material;
 
     private final int energy;
-
     private final PendingRequest pendingRequest;
 
-    
+
     public Node(int prosperity, int food, int material, int energy, PendingRequest pendingRequest) {
         this.prosperity = prosperity;
         this.food = food;

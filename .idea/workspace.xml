@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/strategies/AStarOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/AStarTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/BreadthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/DepthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/GreedyOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/GreedyTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/IterativeDeepeningSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies/UniformCostSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LLAPSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/Build.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/IAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/RequestEnergy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/RequestFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/RequestMaterial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Build.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PendingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/PendingRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/GenericSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/ResourceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/artifacts/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/artifacts/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -73,6 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ziads/Assignment1_AI",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,7 +77,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="14fbc202-c191-4dac-97f5-b4910caf9266" name="Changes" comment="" />
+      <changelist id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="" />
       <created>1697130767235</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -92,6 +85,7 @@
       <workItem from="1697130767237" duration="1001000" />
       <workItem from="1697131801482" duration="85000" />
       <workItem from="1697201547266" duration="850000" />
+      <workItem from="1699027675467" duration="2730000" />
     </task>
     <servers />
   </component>
