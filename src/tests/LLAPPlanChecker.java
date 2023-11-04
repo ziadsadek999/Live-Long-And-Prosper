@@ -131,7 +131,7 @@ public class LLAPPlanChecker {
                 && this.maxMoney - this.currentCost >= x.get(0));
     }
 
-    public void ur(String y) {
+    public void handleValueChanges(String y) {
 
         ArrayList<Integer> x = new ArrayList<>();
 
@@ -198,7 +198,7 @@ public class LLAPPlanChecker {
         }
     }
 
-    boolean requestResource(String an) {
+    boolean RequestResourceAction(String an) {
         processReqResource();
         int i = -1;
         if (!er(an)) {
@@ -230,28 +230,28 @@ public class LLAPPlanChecker {
                 return false;
         }
         this.currentRequestedResource = i;
-        ur(an);
+        handleValueChanges(an);
         capResources();
         return true;
     }
 
-    boolean f3() {
+    boolean WaitAction() {
         processReqResource();
         if (!er("D")) {
             return false;
         }
-        ur("D");
+        handleValueChanges("D");
         capResources();
         return true;
     }
 
-    boolean f2(int i) {
+    boolean BuildAction(int i) {
         processReqResource();
         String an = "E" + i;
         if (!er(an)) {
             return false;
         }
-        ur(an);
+        handleValueChanges(an);
         capResources();
         return true;
     }
@@ -262,22 +262,22 @@ public class LLAPPlanChecker {
 
             switch (actions[i]) {
                 case "requestfood":
-                    linkin = s.requestResource("A");
+                    linkin = s.RequestResourceAction("A");
                     break;
                 case "requestenergy":
-                    linkin = s.requestResource("C");
+                    linkin = s.RequestResourceAction("C");
                     break;
                 case "requestmaterials":
-                    linkin = s.requestResource("B");
+                    linkin = s.RequestResourceAction("B");
                     break;
                 case "build1":
-                    linkin = s.f2(1);
+                    linkin = s.BuildAction(1);
                     break;
                 case "build2":
-                    linkin = s.f2(2);
+                    linkin = s.BuildAction(2);
                     break;
                 case "wait":
-                    linkin = s.f3();
+                    linkin = s.WaitAction();
                     break;
                 default:
                     linkin = false;
