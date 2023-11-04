@@ -10,9 +10,23 @@ public class PendingMaterial extends PendingResource {
     @Override
     public Node propagate(Node currNode) {
         if (getRemainingTime() == 0) {
-            return new Node(currNode.getProsperity(), currNode.getFood(), currNode.getMaterial() + getAmount(), currNode.getEnergy(), null, null, null);
+            return new Node(currNode.getProsperity(),
+                    currNode.getFood(),
+                    currNode.getMaterial() + getAmount(),
+                    currNode.getEnergy(),
+                    null,
+                    null,
+                    null,
+                    0);
         } else {
-            return new Node(currNode.getProsperity(), currNode.getFood(), currNode.getMaterial(), currNode.getEnergy(), decrementTime(), null, null);
+            return new Node(currNode.getProsperity(),
+                    currNode.getFood(),
+                    currNode.getMaterial(),
+                    currNode.getEnergy(),
+                    decrementTime(),
+                    null,
+                    null,
+                    0);
         }
     }
 

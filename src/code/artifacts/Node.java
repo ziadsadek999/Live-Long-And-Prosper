@@ -13,9 +13,10 @@ public class Node {
 
     private Node parent;
 
+    private int cost;
     private String operation;
 
-    public Node(int prosperity, int food, int material, int energy, PendingResource pendingResource, Node parent, String operation) {
+    public Node(int prosperity, int food, int material, int energy, PendingResource pendingResource, Node parent, String operation, int cost) {
         this.prosperity = prosperity;
         this.food = food;
         this.material = material;
@@ -27,7 +28,7 @@ public class Node {
 
     public Node propagatePendingResource() {
         if (pendingResource == null) {
-            return new Node(prosperity, food, material, energy, null, null, null);
+            return new Node(prosperity, food, material, energy, null, null, null, 0);
         }
         return pendingResource.propagate(this);
     }
@@ -54,6 +55,10 @@ public class Node {
 
     public int getEnergy() {
         return energy;
+    }
+
+    public int getCost() {
+        return cost;
     }
 
     public PendingResource getPendingResource() {
@@ -90,6 +95,10 @@ public class Node {
 
     public void setOperation(String operation) {
         this.operation = operation;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
     public void decrementAll() {

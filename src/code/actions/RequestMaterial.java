@@ -15,7 +15,15 @@ public class RequestMaterial extends RequestResource {
             return null;
         }
         if (currNode.getPendingResource() == null) {
-            return new Node(currNode.getProsperity(), currNode.getFood() - 1, currNode.getMaterial() - 1, currNode.getEnergy() - 1, new PendingMaterial(getAmount(), getDelay()), currNode, getName());
+            return new Node(currNode.getProsperity(),
+                    currNode.getFood() - 1,
+                    currNode.getMaterial() - 1,
+                    currNode.getEnergy() - 1,
+                    new PendingMaterial(getAmount(),
+                            getDelay()),
+                    currNode,
+                    getName(),
+                    getCost() + currNode.getCost());
         }
         Node childNode = currNode.propagatePendingResource();
         if (childNode.getPendingResource() == null) {
@@ -23,6 +31,7 @@ public class RequestMaterial extends RequestResource {
             childNode.setParent(currNode);
             childNode.setOperation(getName());
             childNode.decrementAll();
+            childNode.setCost(getCost() + currNode.getCost());
             return childNode;
         }
         return null;

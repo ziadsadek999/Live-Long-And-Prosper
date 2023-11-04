@@ -26,7 +26,8 @@ public class Build extends Action {
                         currNode.getEnergy() - getEnergy(),
                         null,
                         currNode,
-                        getName());
+                        getName(),
+                        getCost() + currNode.getCost());
             }
             return null;
         }
@@ -37,6 +38,7 @@ public class Build extends Action {
             childNode.setFood(childNode.getFood() - getFood());
             childNode.setMaterial(childNode.getMaterial() - getMaterial());
             childNode.setEnergy(childNode.getEnergy() - getEnergy());
+            childNode.setCost(getCost() + currNode.getCost());
             return childNode;
         }
         return null;
