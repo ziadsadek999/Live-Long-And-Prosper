@@ -1,6 +1,6 @@
-package actions;
+package code.actions;
 
-import artifacts.Node;
+import code.artifacts.Node;
 
 abstract public class Action {
     private final int food;

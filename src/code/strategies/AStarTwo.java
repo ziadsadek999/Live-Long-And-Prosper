@@ -1,4 +1,4 @@
-package strategies;
+package code.strategies;
 
 public class AStarTwo extends GenericSearch {
     public AStarTwo(String initialState, String strategy, boolean visualize) {

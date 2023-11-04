@@ -1,4 +1,4 @@
-package actions;
+package code.actions;
 
 abstract public class RequestResource extends Action {
     private final int amount;

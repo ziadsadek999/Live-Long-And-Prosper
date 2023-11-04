@@ -1,8 +1,7 @@
-import actions.*;
-import artifacts.Build;
-import artifacts.Resource;
-import artifacts.ResourceType;
-import artifacts.Strategy;
+package code;
+
+import code.actions.*;
+import code.artifacts.Strategy;
 
 import java.util.*;
 
@@ -58,8 +57,8 @@ public class LLAPSearch {
         actions.add(new RequestFood(splitState[3][0], splitState[3][1]));
         actions.add(new RequestMaterial(splitState[4][0], splitState[4][1]));
         actions.add(new RequestEnergy(splitState[5][0], splitState[5][1]));
-        actions.add(new actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
-        actions.add(new actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
+        actions.add(new code.actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
+        actions.add(new code.actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
         actions.add(new Await());
     }
 

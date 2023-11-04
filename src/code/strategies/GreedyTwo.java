@@ -1,4 +1,4 @@
-package strategies;
+package code.strategies;
 
 public class GreedyTwo extends GenericSearch {
     public GreedyTwo(String initialState, String strategy, boolean visualize) {

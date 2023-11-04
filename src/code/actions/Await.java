@@ -1,6 +1,6 @@
-package actions;
+package code.actions;
 
-import artifacts.Node;
+import code.artifacts.Node;
 
 public class Await extends Action {
 

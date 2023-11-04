@@ -1,4 +1,4 @@
-package artifacts;
+package code.artifacts;
 
 public class Build {
     private final int price;

@@ -1,9 +1,4 @@
-package strategies;
-
-import artifacts.Node;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package code.strategies;
 
 public class BreadthFirstSearch extends GenericSearch {
     public BreadthFirstSearch(String initialState, String strategy, boolean visualize) {

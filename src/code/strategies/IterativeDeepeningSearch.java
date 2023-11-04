@@ -1,4 +1,4 @@
-package strategies;
+package code.strategies;
 
 public class IterativeDeepeningSearch extends GenericSearch {
     public IterativeDeepeningSearch(String initialState, String strategy, boolean visualize) {

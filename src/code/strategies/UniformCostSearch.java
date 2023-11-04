@@ -1,4 +1,4 @@
-package strategies;
+package code.strategies;
 
 public class UniformCostSearch extends GenericSearch {
     public UniformCostSearch(String initialState, String strategy, boolean visualize) {

@@ -1,6 +1,6 @@
-package strategies;
+package code.strategies;
 
-import artifacts.*;
+import code.artifacts.*;
 
 abstract public class GenericSearch {
 
@@ -37,13 +37,13 @@ abstract public class GenericSearch {
     public String toString() {
         String output = "";
         output += "Initial Prosperity: " + initialProsperity + "\n";
-        output += "artifacts.Strategy: " + strategy + "\n";
+        output += "code.artifacts.Strategy: " + strategy + "\n";
         output += "Visualize: " + visualize + "\n";
         output += "Food:\n" + food + "\n";
         output += "Material:\n" + materials + "\n";
         output += "Energy:\n" + energy + "\n";
-        output += "artifacts.Build 1:\n" + build1 + "\n";
-        output += "artifacts.Build 2:\n" + build2 + "\n";
+        output += "code.artifacts.Build 1:\n" + build1 + "\n";
+        output += "code.artifacts.Build 2:\n" + build2 + "\n";
         return output;
     }
 }

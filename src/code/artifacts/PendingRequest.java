@@ -1,4 +1,4 @@
-package artifacts;
+package code.artifacts;
 
 public class PendingRequest {
     private final Resource resource;
