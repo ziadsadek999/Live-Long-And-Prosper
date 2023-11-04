@@ -6,8 +6,8 @@ public class Build extends Action {
     private final int price;
     private final int prosperity;
 
-    public Build(String price, String food, String material, String energy, String prosperity) {
-        super(Integer.parseInt(food), Integer.parseInt(material), Integer.parseInt(energy));
+    public Build(String price, String food, String material, String energy, String prosperity, int buildType) {
+        super(Integer.parseInt(food), Integer.parseInt(material), Integer.parseInt(energy), "BUILD" + buildType);
         this.price = Integer.parseInt(price);
         this.prosperity = Integer.parseInt(prosperity);
     }

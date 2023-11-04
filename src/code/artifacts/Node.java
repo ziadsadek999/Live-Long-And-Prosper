@@ -1,5 +1,6 @@
 package code.artifacts;
 
+import code.pending.IntermediateNode;
 import code.pending.PendingResource;
 
 public class Node {
@@ -25,6 +26,16 @@ public class Node {
         this.operation = operation;
     }
 
+    public Node(Node parent, IntermediateNode intermediateNode, String operation) {
+        this.prosperity = parent.prosperity;
+        this.food = intermediateNode.getFood();
+        this.material = intermediateNode.getMaterial();
+        this.energy = intermediateNode.getEnergy();
+        this.pendingResource = intermediateNode.getPendingResource();
+        this.parent = parent;
+        this.operation = operation;
+    }
+
     public boolean isGoal() {
         return prosperity >= 100;
     }
@@ -43,5 +54,9 @@ public class Node {
 
     public int getEnergy() {
         return energy;
+    }
+
+    public PendingResource getPendingResource() {
+        return pendingResource;
     }
 }

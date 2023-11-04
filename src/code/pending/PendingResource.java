@@ -1,5 +1,7 @@
 package code.pending;
 
+import code.artifacts.Node;
+
 abstract public class PendingResource {
     private final int remainingTime;
     private final int amount;
@@ -17,5 +19,7 @@ abstract public class PendingResource {
         return amount;
     }
 
-    abstract public PendingResource tick();
+    abstract public IntermediateNode tick(Node currNode);
+
+    abstract public PendingResource decrementTime();
 }

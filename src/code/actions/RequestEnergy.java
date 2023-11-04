@@ -5,7 +5,7 @@ import code.artifacts.Node;
 public class RequestEnergy extends RequestResource {
 
     public RequestEnergy(String amount, String delay) {
-        super(amount, delay);
+        super(amount, delay, "RequestEnergy");
     }
 
     @Override

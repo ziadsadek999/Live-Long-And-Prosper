@@ -9,16 +9,22 @@ abstract public class Action {
     private final int food;
     private final int material;
     private final int energy;
+    private final String name;
 
-    public Action(int food, int material, int energy) {
+    public Action(int food, int material, int energy, String name) {
         this.food = food;
         this.material = material;
         this.energy = energy;
+        this.name = name;
     }
 
     abstract public Node perform(Node currNode);
 
     public int getCost() {
         return food * getFoodPrice() + material * getMaterialPrice() + energy + getEnergyPrice();
+    }
+
+    protected String getName() {
+        return name;
     }
 }

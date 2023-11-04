@@ -58,8 +58,8 @@ public class LLAPSearch {
         actions.add(new RequestFood(splitState[3][0], splitState[3][1]));
         actions.add(new RequestMaterial(splitState[4][0], splitState[4][1]));
         actions.add(new RequestEnergy(splitState[5][0], splitState[5][1]));
-        actions.add(new code.actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
-        actions.add(new code.actions.Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4]));
+        actions.add(new Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4], 1));
+        actions.add(new Build(splitState[7][0], splitState[7][1], splitState[7][2], splitState[7][3], splitState[7][4], 2));
         actions.add(new Await());
     }
 
