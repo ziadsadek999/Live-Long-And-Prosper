@@ -20,7 +20,7 @@ public class RequestMaterial extends RequestResource {
                 currNode.getFood() - getFood(),
                 currNode.getMaterial() - getMaterial(),
                 currNode.getEnergy() - getEnergy(),
-                new PendingMaterial(getAmount(), getDelay() + 1),
+                new PendingMaterial(getDelay() + 1, getAmount()),
                 currNode,
                 getName(),
                 currNode.getCost() + getCost());
