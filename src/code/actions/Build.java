@@ -36,6 +36,7 @@ public class Build extends Action {
 
     @Override
     public int getCost() {
-        return price + super.getCost();
+        int cost = price + super.getCost();
+        return cost;
     }
 }

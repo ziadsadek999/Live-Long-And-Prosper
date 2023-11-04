@@ -61,9 +61,13 @@ public class LLAPSearch {
             }
         }
         Node goal = genericSearch.solve();
+        if (goal == null) {
+            System.out.println("NOSOLUTION");
+            return "NOSOLUTION";
+        }
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearch.getNodesExpanded();
-        System.out.println(result);
-        System.out.println(LLAPSearch.string());
+//        System.out.println(result);
+//        System.out.println(LLAPSearch.string());
         return result;
     }
 
@@ -79,6 +83,7 @@ public class LLAPSearch {
 
 
     private static void parse(String initialState) {
+        System.out.println(initialState);
         String[][] splitState = splitState(initialState);
         setInitialValues(splitState);
         setActions(splitState);

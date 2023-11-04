@@ -25,7 +25,7 @@ abstract public class Action {
     abstract public Node perform(Node currNode);
 
     public int getCost() {
-        return food * getFoodPrice() + material * getMaterialPrice() + energy + getEnergyPrice();
+        return food * getFoodPrice() + material * getMaterialPrice() + energy * getEnergyPrice();
     }
 
     protected String getName() {
