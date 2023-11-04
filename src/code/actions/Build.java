@@ -1,5 +1,6 @@
 package code.actions;
 
+import code.LLAPSearch;
 import code.artifacts.Node;
 import code.pending.PendingMaterial;
 
@@ -15,11 +16,8 @@ public class Build extends Action {
 
     @Override
     public Node perform(Node currNode) {
-        if (currNode.isDead()) {
-            return null;
-        }
         if (currNode.getPendingResource() == null) {
-            if (canBuild(currNode)) {
+            if (canPerform(currNode)) {
                 return new Node(currNode.getProsperity() + this.prosperity,
                         currNode.getFood() - getFood(),
                         currNode.getMaterial() - getMaterial(),
@@ -32,7 +30,7 @@ public class Build extends Action {
             return null;
         }
         Node childNode = currNode.propagatePendingResource();
-        if (canBuild(childNode)) {
+        if (canPerform(childNode)) {
             childNode.setParent(currNode);
             childNode.setOperation(getName());
             childNode.setFood(childNode.getFood() - getFood());
@@ -42,13 +40,6 @@ public class Build extends Action {
             return childNode;
         }
         return null;
-    }
-
-    private boolean canBuild(Node currNode) {
-        if (currNode.getFood() < this.getFood() || currNode.getEnergy() < this.getEnergy() || currNode.getMaterial() < this.getMaterial()) {
-            return false;
-        }
-        return true;
     }
 
     @Override

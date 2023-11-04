@@ -20,6 +20,7 @@ public class LLAPSearch {
 
     private static Strategy strategy;
     private static List<Action> actions;
+    public static final int MAX_COST = 100000;
 
     public static String solve(String initialState, String strategy, boolean visualize) {
         parse(initialState);

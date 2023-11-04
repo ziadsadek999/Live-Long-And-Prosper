@@ -11,7 +11,7 @@ public class RequestMaterial extends RequestResource {
 
     @Override
     public Node perform(Node currNode) {
-        if (currNode.isDead()) {
+        if (!canPerform(currNode)) {
             return null;
         }
         if (currNode.getPendingResource() == null) {

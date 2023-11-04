@@ -1,5 +1,6 @@
 package code.actions;
 
+import code.LLAPSearch;
 import code.artifacts.Node;
 import code.pending.PendingEnergy;
 
@@ -13,6 +14,9 @@ public class RequestEnergy extends RequestResource {
     @Override
     public Node perform(Node currNode) {
         if (currNode.isDead()) {
+            return null;
+        }
+        if (currNode.getCost() + getCost() >= LLAPSearch.MAX_COST) {
             return null;
         }
         if (currNode.getPendingResource() == null) {

@@ -39,4 +39,14 @@ abstract public class Action {
     public int getMaterial() {
         return material;
     }
+
+    public boolean canPerform(Node currNode) {
+        if (currNode.getFood() < this.getFood() || currNode.getEnergy() < this.getEnergy() || currNode.getMaterial() < this.getMaterial()) {
+            return false;
+        }
+        if (currNode.getCost() + getCost() >= LLAPSearch.MAX_COST) {
+            return false;
+        }
+        return true;
+    }
 }
