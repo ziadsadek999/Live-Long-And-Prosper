@@ -18,6 +18,7 @@ abstract public class Action {
         this.name = name;
     }
 
+
     abstract public Node perform(Node currNode);
 
     public int getCost() {
@@ -44,7 +45,7 @@ abstract public class Action {
         if (currNode.getFood() < this.getFood() || currNode.getEnergy() < this.getEnergy() || currNode.getMaterial() < this.getMaterial()) {
             return false;
         }
-        if (currNode.getCost() + getCost() >= LLAPSearch.MAX_COST) {
+        if (currNode.getCost() + getCost() > LLAPSearch.MAX_COST) {
             return false;
         }
         return true;

@@ -9,25 +9,13 @@ public class PendingFood extends PendingResource {
     }
 
     @Override
-    public Node propagate(Node currNode) {
-        if (getRemainingTime() == 0) {
-            return new Node(currNode.getProsperity(),
-                    currNode.getFood() + getAmount(),
-                    currNode.getMaterial(),
-                    currNode.getEnergy(),
-                    null,
-                    null,
-                    null,
-                    0);
+    public void propagate(Node currNode) {
+        PendingResource newPendingResource = decrementTime();
+        if (newPendingResource.getRemainingTime() == 0) {
+            currNode.setFood(currNode.getFood() + getAmount());
+            currNode.setPendingResource(null);
         } else {
-            return new Node(currNode.getProsperity(),
-                    currNode.getFood(),
-                    currNode.getMaterial(),
-                    currNode.getEnergy(),
-                    decrementTime(),
-                    null,
-                    null,
-                    0);
+            currNode.setPendingResource(newPendingResource);
         }
     }
 

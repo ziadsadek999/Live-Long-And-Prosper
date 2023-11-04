@@ -19,7 +19,7 @@ abstract public class PendingResource {
         return amount;
     }
 
-    abstract public Node propagate(Node currNode);
+    abstract public void propagate(Node currNode);
 
     abstract public PendingResource decrementTime();
 }

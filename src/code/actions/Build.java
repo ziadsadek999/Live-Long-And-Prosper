@@ -16,30 +16,18 @@ public class Build extends Action {
 
     @Override
     public Node perform(Node currNode) {
-        if (currNode.getPendingResource() == null) {
-            if (canPerform(currNode)) {
-                return new Node(currNode.getProsperity() + this.prosperity,
-                        currNode.getFood() - getFood(),
-                        currNode.getMaterial() - getMaterial(),
-                        currNode.getEnergy() - getEnergy(),
-                        null,
-                        currNode,
-                        getName(),
-                        getCost() + currNode.getCost());
-            }
+        if (!canPerform(currNode)) {
             return null;
         }
-        Node childNode = currNode.propagatePendingResource();
-        if (canPerform(childNode)) {
-            childNode.setParent(currNode);
-            childNode.setOperation(getName());
-            childNode.setFood(childNode.getFood() - getFood());
-            childNode.setMaterial(childNode.getMaterial() - getMaterial());
-            childNode.setEnergy(childNode.getEnergy() - getEnergy());
-            childNode.setCost(getCost() + currNode.getCost());
-            return childNode;
-        }
-        return null;
+        Node childNode = new Node(currNode.getProsperity() + prosperity,
+                currNode.getFood() - getFood(),
+                currNode.getMaterial() - getMaterial(),
+                currNode.getEnergy() - getEnergy(),
+                currNode.getPendingResource(),
+                currNode,
+                getName(),
+                currNode.getCost() + getCost());
+        return childNode;
     }
 
     @Override

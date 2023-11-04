@@ -13,32 +13,17 @@ public class RequestEnergy extends RequestResource {
 
     @Override
     public Node perform(Node currNode) {
-        if (currNode.isDead()) {
+        if (!canPerform(currNode)) {
             return null;
         }
-        if (currNode.getCost() + getCost() >= LLAPSearch.MAX_COST) {
-            return null;
-        }
-        if (currNode.getPendingResource() == null) {
-            return new Node(currNode.getProsperity(),
-                    currNode.getFood() - 1,
-                    currNode.getMaterial() - 1,
-                    currNode.getEnergy() - 1,
-                    new PendingEnergy(getAmount(),
-                            getDelay()),
-                    currNode,
-                    getName(),
-                    getCost() + currNode.getCost());
-        }
-        Node childNode = currNode.propagatePendingResource();
-        if (childNode.getPendingResource() == null) {
-            childNode.setPendingResource(new PendingEnergy(getAmount(), getDelay()));
-            childNode.setParent(currNode);
-            childNode.setOperation(getName());
-            childNode.decrementAll();
-            childNode.setCost(getCost() + currNode.getCost());
-            return childNode;
-        }
-        return null;
+        Node childNode = new Node(currNode.getProsperity(),
+                currNode.getFood() - getFood(),
+                currNode.getMaterial() - getMaterial(),
+                currNode.getEnergy() - getEnergy(),
+                new PendingEnergy(getAmount(), getDelay() + 1),
+                currNode,
+                getName(),
+                currNode.getCost() + getCost());
+        return childNode;
     }
 }

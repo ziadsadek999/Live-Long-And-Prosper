@@ -18,19 +18,19 @@ public class Node {
 
     public Node(int prosperity, int food, int material, int energy, PendingResource pendingResource, Node parent, String operation, int cost) {
         this.prosperity = prosperity;
-        this.food = food;
-        this.material = material;
-        this.energy = energy;
+        setEnergy(energy);
+        setFood(food);
+        setMaterial(material);
         this.pendingResource = pendingResource;
         this.parent = parent;
         this.operation = operation;
+        propagatePendingResource();
     }
 
-    public Node propagatePendingResource() {
-        if (pendingResource == null) {
-            return new Node(prosperity, food, material, energy, null, null, null, 0);
+    public void propagatePendingResource() {
+        if (pendingResource != null) {
+            pendingResource.propagate(this);
         }
-        return pendingResource.propagate(this);
     }
 
     public boolean isGoal() {
@@ -74,15 +74,15 @@ public class Node {
     }
 
     public void setFood(int food) {
-        this.food = food;
+        this.food = Math.min(food, 50);
     }
 
     public void setMaterial(int material) {
-        this.material = material;
+        this.material = Math.min(material, 50);
     }
 
     public void setEnergy(int energy) {
-        this.energy = energy;
+        this.energy = Math.min(energy, 50);
     }
 
     public void setPendingResource(PendingResource pendingResource) {

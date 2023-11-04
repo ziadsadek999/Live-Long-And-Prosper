@@ -1,5 +1,7 @@
 package code.actions;
 
+import code.artifacts.Node;
+
 abstract public class RequestResource extends Action {
     private final int amount;
     private final int delay;
@@ -16,5 +18,9 @@ abstract public class RequestResource extends Action {
 
     public int getDelay() {
         return delay;
+    }
+
+    public boolean canPerform(Node currNode) {
+        return super.canPerform(currNode) && currNode.getPendingResource() == null;
     }
 }
