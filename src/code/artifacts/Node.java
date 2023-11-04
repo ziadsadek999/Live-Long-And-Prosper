@@ -24,6 +24,7 @@ public class Node {
         this.pendingResource = pendingResource;
         this.parent = parent;
         this.operation = operation;
+        this.cost = cost;
         propagatePendingResource();
     }
 
@@ -31,6 +32,10 @@ public class Node {
         if (pendingResource != null) {
             pendingResource.propagate(this);
         }
+    }
+
+    public String getOperation() {
+        return operation;
     }
 
     public boolean isGoal() {

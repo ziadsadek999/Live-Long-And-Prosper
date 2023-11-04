@@ -18,6 +18,9 @@ abstract public class Action {
         this.name = name;
     }
 
+    public String toString() {
+        return "Food: " + food + " Material: " + material + " Energy: " + energy + " Name: " + name;
+    }
 
     abstract public Node perform(Node currNode);
 

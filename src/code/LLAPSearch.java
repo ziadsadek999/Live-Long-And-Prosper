@@ -26,6 +26,7 @@ public class LLAPSearch {
     private static List<Action> actions;
     public static final int MAX_COST = 100000;
 
+
     public static String solve(String initialState, String strategy, boolean visualize) {
         parse(initialState);
         LLAPSearch.visualise = visualize;
@@ -60,8 +61,22 @@ public class LLAPSearch {
             }
         }
         Node goal = genericSearch.solve();
-        return "";
+        String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearch.getNodesExpanded();
+        System.out.println(result);
+        System.out.println(LLAPSearch.string());
+        return result;
     }
+
+    public static String getPlan(Node goal) {
+        StringBuilder path = new StringBuilder();
+        Node currNode = goal;
+        while (currNode.getParent() != null) {
+            path.insert(0, currNode.getOperation() + ",");
+            currNode = currNode.getParent();
+        }
+        return path.toString().substring(0, path.length() - 1);
+    }
+
 
     private static void parse(String initialState) {
         String[][] splitState = splitState(initialState);
@@ -96,6 +111,23 @@ public class LLAPSearch {
         actions.add(new Build(splitState[6][0], splitState[6][1], splitState[6][2], splitState[6][3], splitState[6][4], 1));
         actions.add(new Build(splitState[7][0], splitState[7][1], splitState[7][2], splitState[7][3], splitState[7][4], 2));
         actions.add(new Await());
+    }
+
+    public static String string() {
+        String output = "";
+        output += "Initial Prosperity: " + initialProsperity + "\n";
+        output += "Strategy: " + strategy + "\n";
+        output += "Visualize: " + visualise + "\n";
+        output += "Food:\n" + initialFood + "\n";
+        output += "Material:\n" + initialMaterial + "\n";
+        output += "Energy:\n" + initialEnergy + "\n";
+        output += "Food Price:\n" + foodPrice + "\n";
+        output += "Material Price:\n" + materialPrice + "\n";
+        output += "Energy Price:\n" + energyPrice + "\n";
+        for (Action action : actions) {
+            output += action.toString() + "\n";
+        }
+        return output;
     }
 
     public static int getInitialProsperity() {
@@ -138,3 +170,5 @@ public class LLAPSearch {
         return actions;
     }
 }
+
+

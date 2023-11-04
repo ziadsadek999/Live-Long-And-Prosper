@@ -30,6 +30,10 @@ public class Build extends Action {
         return childNode;
     }
 
+    public String toString() {
+        return super.toString() + " Prosperity: " + prosperity + " Price: " + price;
+    }
+
     @Override
     public int getCost() {
         return price + super.getCost();
