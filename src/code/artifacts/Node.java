@@ -25,6 +25,13 @@ public class Node {
         this.operation = operation;
     }
 
+    public Node propagatePendingResource() {
+        if (pendingResource == null) {
+            return new Node(prosperity, food, material, energy, null, null, null);
+        }
+        return pendingResource.propagate(this);
+    }
+
     public boolean isGoal() {
         return prosperity >= 100;
     }

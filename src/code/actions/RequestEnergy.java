@@ -18,7 +18,7 @@ public class RequestEnergy extends RequestResource {
         if (currNode.getPendingResource() == null) {
             return new Node(currNode.getProsperity(), currNode.getFood() - 1, currNode.getMaterial() - 1, currNode.getEnergy() - 1, new PendingEnergy(getAmount(), getDelay()), currNode, getName());
         }
-        Node childNode = currNode.getPendingResource().tick(currNode);
+        Node childNode = currNode.propagatePendingResource();
         if (childNode.getPendingResource() == null) {
             childNode.setPendingResource(new PendingEnergy(getAmount(), getDelay()));
             childNode.setParent(currNode);

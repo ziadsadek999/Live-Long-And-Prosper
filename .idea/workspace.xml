@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/actions/Await.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Await.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Build.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/actions/RequestEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestEnergy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/actions/RequestFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestFood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/actions/RequestMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/artifacts/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingEnergy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingFood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

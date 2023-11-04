@@ -8,7 +8,7 @@ public class PendingMaterial extends PendingResource {
     }
 
     @Override
-    public Node tick(Node currNode) {
+    public Node propagate(Node currNode) {
         if (getRemainingTime() == 0) {
             return new Node(currNode.getProsperity(), currNode.getFood(), currNode.getMaterial() + getAmount(), currNode.getEnergy(), null, null, null);
         } else {

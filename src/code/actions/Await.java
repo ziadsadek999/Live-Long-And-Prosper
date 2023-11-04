@@ -15,7 +15,7 @@ public class Await extends Action {
         if (currNode.getPendingResource() == null) {
             return new Node(currNode.getProsperity(), currNode.getFood() - 1, currNode.getMaterial() - 1, currNode.getEnergy() - 1, null, currNode, getName());
         }
-        Node childNode = currNode.getPendingResource().tick(currNode);
+        Node childNode = currNode.propagatePendingResource();
         childNode.setParent(currNode);
         childNode.setOperation(getName());
         childNode.decrementAll();

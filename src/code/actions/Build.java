@@ -30,7 +30,7 @@ public class Build extends Action {
             }
             return null;
         }
-        Node childNode = currNode.getPendingResource().tick(currNode);
+        Node childNode = currNode.propagatePendingResource();
         if (canBuild(childNode)) {
             childNode.setParent(currNode);
             childNode.setOperation(getName());
