@@ -1,6 +1,9 @@
 package code.actions;
 
+import code.LLAPSearch;
 import code.artifacts.Node;
+
+import static code.LLAPSearch.*;
 
 abstract public class Action {
     private final int food;
@@ -16,6 +19,6 @@ abstract public class Action {
     abstract public Node perform(Node currNode);
 
     public int getCost() {
-        return food + material + energy;
+        return food * getFoodPrice() + material * getMaterialPrice() + energy + getEnergyPrice();
     }
 }

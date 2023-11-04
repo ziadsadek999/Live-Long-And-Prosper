@@ -21,10 +21,11 @@ public class LLAPSearch {
     private static Strategy strategy;
     private static List<Action> actions;
 
-    public static void solve(String initialState, String strategy, boolean visualize) {
+    public static String solve(String initialState, String strategy, boolean visualize) {
         parse(initialState);
         LLAPSearch.visualise = visualize;
         LLAPSearch.strategy = Strategy.valueOf(strategy);
+        return "";
     }
 
     private static void parse(String initialState) {

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/Await.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/RequestResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/LLAPPlanChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Build.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/IAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/RequestEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/RequestEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/RequestFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/RequestFood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/RequestMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/RequestMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1_AI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1_AI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Action.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,21 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ziads/Assignment1_AI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ziads/Assignment1_AI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ziads\Assignment1_AI\src\tests" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
