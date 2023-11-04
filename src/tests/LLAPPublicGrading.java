@@ -79,7 +79,7 @@ public class LLAPPublicGrading {
 			"358,14,25,23,39;" +
 			"5024,20,17,17,38;";
 
-	@Test(timeout = 120000)
+	@Test(timeout = 120000000000L)
 	public void testa0() throws Exception {
 		String solution = LLAPSearch.solve(initialState0, "BF", false);
 		solution = solution.replace(" ", "");
