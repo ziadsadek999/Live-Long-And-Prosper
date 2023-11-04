@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/LLAPPlanChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/pending/PendingEnergy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/pending/PendingFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/pending/PendingMaterial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/pending/PendingResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1_AI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1_AI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/Build.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/artifacts/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/PendingRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/artifacts/ResourceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/AStarOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/AStarOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/AStarTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/AStarTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/GenericSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/GenericSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/GreedyOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/GreedyOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/GreedyTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/GreedyTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/IterativeDeepeningSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/IterativeDeepeningSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/strategies/UniformCostSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/strategies/UniformCostSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
