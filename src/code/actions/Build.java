@@ -1,6 +1,7 @@
 package code.actions;
 
 import code.artifacts.Node;
+import code.pending.PendingMaterial;
 
 public class Build extends Action {
     private final int price;
@@ -14,7 +15,38 @@ public class Build extends Action {
 
     @Override
     public Node perform(Node currNode) {
+        if (currNode.isDead()) {
+            return null;
+        }
+        if (currNode.getPendingResource() == null) {
+            if (canBuild(currNode)) {
+                return new Node(currNode.getProsperity() + this.prosperity,
+                        currNode.getFood() - getFood(),
+                        currNode.getMaterial() - getMaterial(),
+                        currNode.getEnergy() - getEnergy(),
+                        null,
+                        currNode,
+                        getName());
+            }
+            return null;
+        }
+        Node childNode = currNode.getPendingResource().tick(currNode);
+        if (canBuild(childNode)) {
+            childNode.setParent(currNode);
+            childNode.setOperation(getName());
+            childNode.setFood(childNode.getFood() - getFood());
+            childNode.setMaterial(childNode.getMaterial() - getMaterial());
+            childNode.setEnergy(childNode.getEnergy() - getEnergy());
+            return childNode;
+        }
         return null;
+    }
+
+    private boolean canBuild(Node currNode) {
+        if (currNode.getFood() < this.getFood() || currNode.getEnergy() < this.getEnergy() || currNode.getMaterial() < this.getMaterial()) {
+            return false;
+        }
+        return true;
     }
 
     @Override

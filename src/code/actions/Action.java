@@ -27,4 +27,16 @@ abstract public class Action {
     protected String getName() {
         return name;
     }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public int getFood() {
+        return food;
+    }
+
+    public int getMaterial() {
+        return material;
+    }
 }
