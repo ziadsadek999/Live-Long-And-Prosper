@@ -9,14 +9,11 @@ public class PendingFood extends PendingResource {
     }
 
     @Override
-    public IntermediateNode tick(Node currNode) {
-        int newFood = currNode.getFood() - 1;
-        int newMaterial = currNode.getMaterial() - 1;
-        int newEnergy = currNode.getEnergy() - 1;
+    public Node tick(Node currNode) {
         if (getRemainingTime() == 0) {
-            return new IntermediateNode(newFood + getAmount(), newMaterial, newEnergy, null);
+            return new Node(currNode.getProsperity(), currNode.getFood() + getAmount(), currNode.getMaterial(), currNode.getEnergy(), null, null, null);
         } else {
-            return new IntermediateNode(newFood, newMaterial, newEnergy, decrementTime());
+            return new Node(currNode.getProsperity(), currNode.getFood(), currNode.getMaterial(), currNode.getEnergy(), decrementTime(), null, null);
         }
     }
 

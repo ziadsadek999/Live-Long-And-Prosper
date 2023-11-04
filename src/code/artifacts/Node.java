@@ -1,20 +1,19 @@
 package code.artifacts;
 
-import code.pending.IntermediateNode;
 import code.pending.PendingResource;
 
 public class Node {
-    private final int prosperity;
-    private final int food;
+    private int prosperity;
+    private int food;
 
-    private final int material;
+    private int material;
 
-    private final int energy;
-    private final PendingResource pendingResource;
+    private int energy;
+    private PendingResource pendingResource;
 
-    private final Node parent;
+    private Node parent;
 
-    private final String operation;
+    private String operation;
 
     public Node(int prosperity, int food, int material, int energy, PendingResource pendingResource, Node parent, String operation) {
         this.prosperity = prosperity;
@@ -22,16 +21,6 @@ public class Node {
         this.material = material;
         this.energy = energy;
         this.pendingResource = pendingResource;
-        this.parent = parent;
-        this.operation = operation;
-    }
-
-    public Node(Node parent, IntermediateNode intermediateNode, String operation) {
-        this.prosperity = parent.prosperity;
-        this.food = intermediateNode.getFood();
-        this.material = intermediateNode.getMaterial();
-        this.energy = intermediateNode.getEnergy();
-        this.pendingResource = intermediateNode.getPendingResource();
         this.parent = parent;
         this.operation = operation;
     }
@@ -62,5 +51,43 @@ public class Node {
 
     public PendingResource getPendingResource() {
         return pendingResource;
+    }
+
+    public Node getParent() {
+        return parent;
+    }
+
+    public void setProsperity(int prosperity) {
+        this.prosperity = prosperity;
+    }
+
+    public void setFood(int food) {
+        this.food = food;
+    }
+
+    public void setMaterial(int material) {
+        this.material = material;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+
+    public void setPendingResource(PendingResource pendingResource) {
+        this.pendingResource = pendingResource;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public void decrementAll() {
+        this.food--;
+        this.material--;
+        this.energy--;
     }
 }

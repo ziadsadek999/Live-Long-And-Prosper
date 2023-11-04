@@ -1,8 +1,6 @@
 package code.actions;
 
 import code.artifacts.Node;
-import code.pending.IntermediateNode;
-import code.pending.PendingResource;
 
 public class Await extends Action {
     public Await() {
@@ -17,7 +15,10 @@ public class Await extends Action {
         if (currNode.getPendingResource() == null) {
             return new Node(currNode.getProsperity(), currNode.getFood() - 1, currNode.getMaterial() - 1, currNode.getEnergy() - 1, null, currNode, getName());
         }
-        IntermediateNode intermediateNode = currNode.getPendingResource().tick(currNode);
-        return new Node(currNode, intermediateNode, getName());
+        Node childNode = currNode.getPendingResource().tick(currNode);
+        childNode.setParent(currNode);
+        childNode.setOperation(getName());
+        childNode.decrementAll();
+        return childNode;
     }
 }

@@ -1,7 +1,6 @@
 package code.actions;
 
 import code.artifacts.Node;
-import code.pending.IntermediateNode;
 import code.pending.PendingMaterial;
 
 public class RequestMaterial extends RequestResource {
@@ -18,10 +17,13 @@ public class RequestMaterial extends RequestResource {
         if (currNode.getPendingResource() == null) {
             return new Node(currNode.getProsperity(), currNode.getFood() - 1, currNode.getMaterial() - 1, currNode.getEnergy() - 1, new PendingMaterial(getAmount(), getDelay()), currNode, getName());
         }
-        IntermediateNode intermediateNode = currNode.getPendingResource().tick(currNode);
-        if (intermediateNode.getPendingResource() == null) {
-            intermediateNode.setPendingResource(new PendingMaterial(getAmount(), getDelay()));
-            return new Node(currNode, intermediateNode, getName());
+        Node childNode = currNode.getPendingResource().tick(currNode);
+        if (childNode.getPendingResource() == null) {
+            childNode.setPendingResource(new PendingMaterial(getAmount(), getDelay()));
+            childNode.setParent(currNode);
+            childNode.setOperation(getName());
+            childNode.decrementAll();
+            return childNode;
         }
         return null;
     }
