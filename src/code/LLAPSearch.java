@@ -66,7 +66,7 @@ public class LLAPSearch {
             return "NOSOLUTION";
         }
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearch.getNodesExpanded();
-//        System.out.println(result);
+        //System.out.println(result);
 //        System.out.println(LLAPSearch.string());
         return result;
     }

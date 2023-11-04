@@ -19,7 +19,7 @@ public class RequestFood extends RequestResource {
                 currNode.getFood() - getFood(),
                 currNode.getMaterial() - getMaterial(),
                 currNode.getEnergy() - getEnergy(),
-                new PendingFood(getAmount(), getDelay() + 1),
+                new PendingFood(getDelay() + 1, getAmount()),
                 currNode,
                 getName(),
                 currNode.getCost() + getCost());
