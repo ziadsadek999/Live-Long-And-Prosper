@@ -23,4 +23,9 @@ public class Await extends Action {
 
         return childNode;
     }
+
+    @Override
+    public boolean canPerform(Node currNode) {
+        return super.canPerform(currNode) && currNode.getPendingResource() != null;
+    }
 }
