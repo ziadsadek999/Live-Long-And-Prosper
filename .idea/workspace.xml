@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e158a0e1-8aed-4125-982b-1b7bedeb3826" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/code/pending/IntermediateNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/Await.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Await.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/actions/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/Build.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/RequestEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestEnergy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/RequestFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestFood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/RequestMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestMaterial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/actions/RequestResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/actions/RequestResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/artifacts/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/artifacts/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingFood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/pending/PendingResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/PendingResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/pending/IntermediateNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/pending/IntermediateNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ziads/Assignment1_AI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ziads/Assignment1_AI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ziads\Assignment1_AI\src\tests" />

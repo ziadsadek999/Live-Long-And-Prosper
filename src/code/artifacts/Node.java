@@ -40,6 +40,10 @@ public class Node {
         return prosperity >= 100;
     }
 
+    public boolean isDead() {
+        return food <= 0 || material <= 0 || energy <= 0;
+    }
+
     public int getProsperity() {
         return prosperity;
     }

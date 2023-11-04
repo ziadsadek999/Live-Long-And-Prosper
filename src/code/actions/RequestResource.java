@@ -9,4 +9,12 @@ abstract public class RequestResource extends Action {
         this.amount = Integer.parseInt(amount);
         this.delay = Integer.parseInt(delay);
     }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public int getDelay() {
+        return delay;
+    }
 }

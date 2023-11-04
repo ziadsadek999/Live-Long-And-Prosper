@@ -5,7 +5,7 @@ public class IntermediateNode {
     private final int food;
     private final int material;
     private final int energy;
-    private final PendingResource pendingResource;
+    private PendingResource pendingResource;
 
     public IntermediateNode(int food, int material, int energy, PendingResource pendingResource) {
         this.food = food;
@@ -28,5 +28,9 @@ public class IntermediateNode {
 
     public PendingResource getPendingResource() {
         return pendingResource;
+    }
+
+    public void setPendingResource(PendingResource pendingResource) {
+        this.pendingResource = pendingResource;
     }
 }

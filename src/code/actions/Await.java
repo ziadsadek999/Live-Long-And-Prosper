@@ -11,7 +11,7 @@ public class Await extends Action {
 
     @Override
     public Node perform(Node currNode) {
-        if (currNode.getFood() <= 0 || currNode.getMaterial() <= 0 || currNode.getEnergy() <= 0) {
+        if (currNode.isDead()) {
             return null;
         }
         if (currNode.getPendingResource() == null) {
