@@ -22,4 +22,8 @@ public class PendingMaterial extends PendingResource {
     public PendingResource decrementTime() {
         return new PendingMaterial(getRemainingTime() - 1, getAmount());
     }
+
+    public String toString() {
+        return super.toString() + " material";
+    }
 }

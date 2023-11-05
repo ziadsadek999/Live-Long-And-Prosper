@@ -22,4 +22,8 @@ abstract public class PendingResource {
     abstract public void propagate(Node currNode);
 
     abstract public PendingResource decrementTime();
+
+    public String toString() {
+        return "RemainingTime: " + remainingTime + " Amount: " + amount;
+    }
 }

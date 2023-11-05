@@ -23,4 +23,8 @@ public class PendingEnergy extends PendingResource {
     public PendingResource decrementTime() {
         return new PendingEnergy(getRemainingTime() - 1, getAmount());
     }
+
+    public String toString() {
+        return super.toString() + " energy";
+    }
 }

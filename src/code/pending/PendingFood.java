@@ -23,4 +23,8 @@ public class PendingFood extends PendingResource {
     public PendingResource decrementTime() {
         return new PendingFood(getRemainingTime() - 1, getAmount());
     }
+
+    public String toString() {
+        return super.toString() + " food";
+    }
 }
