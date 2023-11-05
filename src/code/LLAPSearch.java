@@ -29,46 +29,54 @@ public class LLAPSearch {
 
     public static String solve(String initialState, String strategy, boolean visualize) {
         parse(initialState);
+
         LLAPSearch.visualise = visualize;
         LLAPSearch.strategy = Strategy.valueOf(strategy);
+
         Node root = new Node(initialProsperity, initialFood, initialMaterial, initialEnergy, null, null, null, 0);
         Strategy strategyEnum = Strategy.valueOf(strategy);
+        GenericSearch genericSearchAlgorithm = getGenericSearchAlgorithm(strategyEnum, root);
+
+        Node goal = genericSearchAlgorithm.solve();
+
+        if (goal == null) {
+            System.out.println("NOSOLUTION");
+            return "NOSOLUTION";
+        }
+
+        String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearchAlgorithm.getNodesExpanded();
+        return result;
+    }
+
+    private static GenericSearch getGenericSearchAlgorithm(Strategy strategyEnum, Node root) {
         GenericSearch genericSearch = null;
         switch (strategyEnum) {
             case BF -> {
                 genericSearch = new BreadthFirstSearch(root);
             }
             case DF -> {
-                genericSearch = new code.strategies.DepthFirstSearch(root);
+                genericSearch = new DepthFirstSearch(root);
             }
             case ID -> {
                 genericSearch = new IterativeDeepeningSearch(root);
             }
             case UC -> {
-                genericSearch = new code.strategies.UniformCostSearch(root);
+                genericSearch = new UniformCostSearch(root);
             }
             case GR1 -> {
-                genericSearch = new code.strategies.GreedyOne(root);
+                genericSearch = new GreedyOne(root);
             }
             case GR2 -> {
-                genericSearch = new code.strategies.GreedyTwo(root);
+                genericSearch = new GreedyTwo(root);
             }
             case AS1 -> {
-                genericSearch = new code.strategies.AStarOne(root);
+                genericSearch = new AStarOne(root);
             }
             case AS2 -> {
-                genericSearch = new code.strategies.AStarTwo(root);
+                genericSearch = new AStarTwo(root);
             }
         }
-        Node goal = genericSearch.solve();
-        if (goal == null) {
-            System.out.println("NOSOLUTION");
-            return "NOSOLUTION";
-        }
-        String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearch.getNodesExpanded();
-        //System.out.println(result);
-//        System.out.println(LLAPSearch.string());
-        return result;
+        return genericSearch;
     }
 
     public static String getPlan(Node goal) {
