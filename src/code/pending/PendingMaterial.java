@@ -1,6 +1,6 @@
 package code.pending;
 
-import code.artifacts.Node;
+import code.artifacts.LLAPNode;
 
 public class PendingMaterial extends PendingResource {
     public PendingMaterial(int remainingTime, int amount) {
@@ -8,7 +8,7 @@ public class PendingMaterial extends PendingResource {
     }
 
     @Override
-    public void propagate(Node currNode) {
+    public void propagate(LLAPNode currNode) {
         PendingResource newPendingResource = decrementTime();
         if (newPendingResource.getRemainingTime() == 0) {
             currNode.setMaterial(currNode.getMaterial() + getAmount());

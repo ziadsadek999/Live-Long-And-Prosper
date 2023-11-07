@@ -1,6 +1,6 @@
 package code.pending;
 
-import code.artifacts.Node;
+import code.artifacts.LLAPNode;
 
 abstract public class PendingResource {
     private final int remainingTime;
@@ -19,7 +19,7 @@ abstract public class PendingResource {
         return amount;
     }
 
-    abstract public void propagate(Node currNode);
+    abstract public void propagate(LLAPNode currNode);
 
     abstract public PendingResource decrementTime();
 

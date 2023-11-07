@@ -1,7 +1,7 @@
 package code.pending;
 
 
-import code.artifacts.Node;
+import code.artifacts.LLAPNode;
 
 public class PendingFood extends PendingResource {
     public PendingFood(int remainingTime, int amount) {
@@ -9,7 +9,7 @@ public class PendingFood extends PendingResource {
     }
 
     @Override
-    public void propagate(Node currNode) {
+    public void propagate(LLAPNode currNode) {
         PendingResource newPendingResource = decrementTime();
         if (newPendingResource.getRemainingTime() == 0) {
             currNode.setFood(currNode.getFood() + getAmount());

@@ -1,6 +1,7 @@
 package code;
 
 import code.actions.*;
+import code.artifacts.LLAPNode;
 import code.artifacts.Node;
 import code.artifacts.Strategy;
 import code.strategies.BreadthFirstSearch;
@@ -32,8 +33,7 @@ public class LLAPSearch {
 
         LLAPSearch.visualise = visualize;
         LLAPSearch.strategy = Strategy.valueOf(strategy);
-
-        Node root = new Node(initialProsperity, initialFood, initialMaterial, initialEnergy, null, null, null, 0);
+        Node root = new LLAPNode(initialProsperity, initialFood, initialMaterial, initialEnergy, null, null, null, 0);
         Strategy strategyEnum = Strategy.valueOf(strategy);
         GenericSearch genericSearchAlgorithm = getGenericSearchAlgorithm(strategyEnum, root);
 
@@ -76,6 +76,8 @@ public class LLAPSearch {
                 genericSearch = new AStarTwo(root);
             }
         }
+      
+//        System.out.println(LLAPSearch.string());
         return genericSearch;
     }
 

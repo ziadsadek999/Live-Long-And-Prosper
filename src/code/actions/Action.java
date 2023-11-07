@@ -1,6 +1,7 @@
 package code.actions;
 
 import code.LLAPSearch;
+import code.artifacts.LLAPNode;
 import code.artifacts.Node;
 
 import static code.LLAPSearch.*;
@@ -44,7 +45,7 @@ abstract public class Action {
         return material;
     }
 
-    public boolean canPerform(Node currNode) {
+    public boolean canPerform(LLAPNode currNode) {
         if (currNode.getFood() < this.getFood() || currNode.getEnergy() < this.getEnergy() || currNode.getMaterial() < this.getMaterial()) {
             return false;
         }

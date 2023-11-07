@@ -1,6 +1,7 @@
 package code.actions;
 
 import code.LLAPSearch;
+import code.artifacts.LLAPNode;
 import code.artifacts.Node;
 import code.pending.PendingMaterial;
 
@@ -15,11 +16,12 @@ public class Build extends Action {
     }
 
     @Override
-    public Node perform(Node currNode) {
+    public Node perform(Node node) {
+        LLAPNode currNode = (LLAPNode) node;
         if (!canPerform(currNode)) {
             return null;
         }
-        Node childNode = new Node(currNode.getProsperity() + prosperity,
+        Node childNode = new LLAPNode(currNode.getProsperity() + prosperity,
                 currNode.getFood() - getFood(),
                 currNode.getMaterial() - getMaterial(),
                 currNode.getEnergy() - getEnergy(),

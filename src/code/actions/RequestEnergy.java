@@ -1,6 +1,7 @@
 package code.actions;
 
 import code.LLAPSearch;
+import code.artifacts.LLAPNode;
 import code.artifacts.Node;
 import code.pending.PendingEnergy;
 
@@ -12,11 +13,12 @@ public class RequestEnergy extends RequestResource {
     }
 
     @Override
-    public Node perform(Node currNode) {
+    public Node perform(Node node) {
+        LLAPNode currNode = (LLAPNode) node;
         if (!canPerform(currNode)) {
             return null;
         }
-        Node childNode = new Node(currNode.getProsperity(),
+        Node childNode = new LLAPNode(currNode.getProsperity(),
                 currNode.getFood() - getFood(),
                 currNode.getMaterial() - getMaterial(),
                 currNode.getEnergy() - getEnergy(),

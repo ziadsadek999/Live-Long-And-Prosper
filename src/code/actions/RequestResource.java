@@ -1,5 +1,6 @@
 package code.actions;
 
+import code.artifacts.LLAPNode;
 import code.artifacts.Node;
 
 abstract public class RequestResource extends Action {
@@ -20,7 +21,7 @@ abstract public class RequestResource extends Action {
         return delay;
     }
 
-    public boolean canPerform(Node currNode) {
+    public boolean canPerform(LLAPNode currNode) {
         return super.canPerform(currNode) && currNode.getPendingResource() == null;
     }
 }
