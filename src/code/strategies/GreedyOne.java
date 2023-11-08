@@ -14,6 +14,7 @@ public class GreedyOne extends GenericSearch {
     }
 
     public int GetHueristicValue(Node o) {
+        if(o.isGoal()) return 0;
         return (100 - ((LLAPNode)o).getProsperity());
     }
 

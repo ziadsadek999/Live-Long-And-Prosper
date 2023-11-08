@@ -15,6 +15,7 @@ public class GreedyTwo extends GenericSearch {
     }
 
     public float GetHueristicValue(Node o) {
+        if(o.isGoal()) return 0;
         int remProsperity = (100 - ((LLAPNode)o).getProsperity());
         
         Build Build1 = (Build)LLAPSearch.getActions().get(0);

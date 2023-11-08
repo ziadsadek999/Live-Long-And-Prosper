@@ -43,6 +43,7 @@ public class AStarTwo extends GenericSearch {
     }
 
     public float GetHueristicValue(Node o) {
+        if(o.isGoal()) return 0;
         LLAPNode lnode = (LLAPNode)o;
 
         Build Build1 = (Build)LLAPSearch.getActions().get(0);
