@@ -37,6 +37,9 @@ public class LLAPSearch {
         Strategy strategyEnum = Strategy.valueOf(strategy);
         GenericSearch genericSearchAlgorithm = getGenericSearchAlgorithm(strategyEnum, root);
 
+        // start
+        
+
         Node goal = genericSearchAlgorithm.solve();
 
         if (goal == null) {
@@ -45,6 +48,9 @@ public class LLAPSearch {
         }
 
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearchAlgorithm.getNodesExpanded();
+        
+        // end
+
         return result;
     }
 

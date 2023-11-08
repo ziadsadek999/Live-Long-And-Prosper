@@ -41,4 +41,8 @@ public class Build extends Action {
         int cost = price + super.getCost();
         return cost;
     }
+
+    public int getProsperity() {
+        return this.prosperity;
+    }
 }

@@ -4,11 +4,11 @@ import code.pending.PendingResource;
 
 public class LLAPNode extends Node {
     private final int prosperity;
+    
     private int food;
-
     private int material;
-
     private int energy;
+    
     private PendingResource pendingResource;
 
 
