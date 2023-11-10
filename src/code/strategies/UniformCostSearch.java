@@ -16,28 +16,11 @@ public class UniformCostSearch extends GenericSearch {
         super(root);
     }
 
-    public Node solve(){
-        HashSet<String> explored = new HashSet<>();
-        //priority queue that sorts on node cost 
+    public Node solve() {
+        //priority queue that sorts on node cost
         PriorityQueue<Node> queue = new PriorityQueue<Node>((o1, o2) -> o1.getCost() - o2.getCost());
 
         queue.add(root);
-        while (!queue.isEmpty()) {
-            Node node = queue.poll();
-            if (node.isGoal()) {
-                return node;
-            }
-            if (explored.contains(node.toString())) {
-                continue;
-            }
-            explored.add(node.toString());
-            List<Node> children = expand(node);
-            for (Node child : children) {
-                if(!explored.contains(child.toString())){
-                    queue.add(child);
-                }
-            }
-        }
-        return null;
+        return handleQueue(queue);
     }
 }

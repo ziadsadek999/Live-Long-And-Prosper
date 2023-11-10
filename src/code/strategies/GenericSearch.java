@@ -5,7 +5,9 @@ import code.actions.Action;
 import code.artifacts.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Queue;
 
 abstract public class GenericSearch {
     Node root;
@@ -28,6 +30,25 @@ abstract public class GenericSearch {
         }
         nodesExpanded++;
         return children;
+    }
+
+    protected Node handleQueue(Queue<Node> queue) {
+        HashSet<String> explored = new HashSet<>();
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            if (node.isGoal()) {
+                return node;
+            }
+            if (explored.contains(node.toString())) {
+                continue;
+            }
+            explored.add(node.toString());
+            List<Node> children = expand(node);
+            for (Node child : children) {
+                queue.add(child);
+            }
+        }
+        return null;
     }
 
     public int getNodesExpanded() {

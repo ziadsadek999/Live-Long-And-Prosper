@@ -35,7 +35,7 @@ public class LLAPSearch {
         LLAPSearch.strategy = Strategy.valueOf(strategy);
         Node root = new LLAPNode(initialProsperity, initialFood, initialMaterial, initialEnergy, null, null, null, 0);
         Strategy strategyEnum = Strategy.valueOf(strategy);
-        GenericSearch genericSearchAlgorithm = getGenericSearchAlgorithm(strategyEnum, root);        
+        GenericSearch genericSearchAlgorithm = getGenericSearchAlgorithm(strategyEnum, root);
 
         Node goal = genericSearchAlgorithm.solve();
 
@@ -77,7 +77,7 @@ public class LLAPSearch {
                 genericSearch = new AStarTwo(root);
             }
         }
-      
+
 //        System.out.println(LLAPSearch.string());
         return genericSearch;
     }
@@ -92,6 +92,11 @@ public class LLAPSearch {
         return path.toString().substring(0, path.length() - 1);
     }
 
+    public static void print(String string) {
+        if (visualise) {
+            System.out.println(string);
+        }
+    }
 
     private static void parse(String initialState) {
         System.out.println(initialState);
