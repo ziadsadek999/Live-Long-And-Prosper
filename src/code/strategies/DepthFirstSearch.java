@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Stack;
 
+import code.LLAPSearch;
 import code.artifacts.Node;
 
 public class DepthFirstSearch extends GenericSearch {
@@ -13,14 +14,16 @@ public class DepthFirstSearch extends GenericSearch {
         super(root);
     }
 
-    public Node solve(){
+    public Node solve() {
         HashSet<String> explored = new HashSet<>();
         Stack<Node> stack = new Stack<>();
 
         stack.push(root);
         while (!stack.isEmpty()) {
             Node node = stack.pop();
+            LLAPSearch.print("Current Node: " + node);
             if (node.isGoal()) {
+                LLAPSearch.print("Goal Reached!");
                 return node;
             }
             if (explored.contains(node.toString())) {
@@ -29,7 +32,7 @@ public class DepthFirstSearch extends GenericSearch {
             explored.add(node.toString());
             List<Node> children = expand(node);
             for (Node child : children) {
-                if(!explored.contains(child.toString())){
+                if (!explored.contains(child.toString())) {
                     stack.push(child);
                 }
             }

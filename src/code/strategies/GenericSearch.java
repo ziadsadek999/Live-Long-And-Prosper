@@ -36,7 +36,9 @@ abstract public class GenericSearch {
         HashSet<String> explored = new HashSet<>();
         while (!queue.isEmpty()) {
             Node node = queue.poll();
+            LLAPSearch.print("Current Node: " + node);
             if (node.isGoal()) {
+                LLAPSearch.print("Goal Reached!");
                 return node;
             }
             if (explored.contains(node.toString())) {

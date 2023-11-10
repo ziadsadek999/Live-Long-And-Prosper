@@ -24,6 +24,6 @@ abstract public class PendingResource {
     abstract public PendingResource decrementTime();
 
     public String toString() {
-        return "RemainingTime: " + remainingTime + " Amount: " + amount;
+        return " RemainingTime: " + remainingTime + " Amount: " + amount;
     }
 }

@@ -25,6 +25,6 @@ public class PendingFood extends PendingResource {
     }
 
     public String toString() {
-        return super.toString() + " food";
+        return "(Food " + super.toString() + ")";
     }
 }

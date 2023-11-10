@@ -1,5 +1,6 @@
 package code.strategies;
 
+import code.LLAPSearch;
 import code.artifacts.Node;
 
 import java.util.HashSet;
@@ -33,8 +34,9 @@ public class IterativeDeepeningSearch extends GenericSearch {
             NodeWithDepth nodeWithDepth = stack.pop();
             Node currentNode = nodeWithDepth.node;
             int currentDepth = nodeWithDepth.depth;
-
+            LLAPSearch.print("Current Node: " + currentNode);
             if (currentNode.isGoal()) {
+                LLAPSearch.print("Goal Reached!");
                 return currentNode;
             }
 

@@ -45,7 +45,7 @@ public class LLAPSearch {
         }
 
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearchAlgorithm.getNodesExpanded();
-        System.out.println(result);
+        print(result);
         return result;
     }
 

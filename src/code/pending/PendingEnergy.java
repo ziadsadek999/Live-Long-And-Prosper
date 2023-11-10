@@ -25,6 +25,6 @@ public class PendingEnergy extends PendingResource {
     }
 
     public String toString() {
-        return super.toString() + " energy";
+        return "(Energy " + super.toString() + ")";
     }
 }

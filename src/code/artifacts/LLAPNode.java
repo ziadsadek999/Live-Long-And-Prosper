@@ -4,11 +4,11 @@ import code.pending.PendingResource;
 
 public class LLAPNode extends Node {
     private final int prosperity;
-    
+
     private int food;
     private int material;
     private int energy;
-    
+
     private PendingResource pendingResource;
 
 
@@ -29,9 +29,8 @@ public class LLAPNode extends Node {
     }
 
     public String toString() {
-        return "Prosperity: " + prosperity + " Food: " + food + " Material: " + material + " Energy: " + energy + " PendingResource: " + pendingResource + " Cost: " + getCost();
+        return "\nProsperity: " + prosperity + "\nFood: " + food + "\nMaterial: " + material + "\nEnergy: " + energy + "\nPendingResource: " + pendingResource + "\nCost: " + getCost() + "\n-------------------------";
     }
-
 
 
     public boolean isGoal() {
@@ -59,12 +58,11 @@ public class LLAPNode extends Node {
     }
 
 
-
     public PendingResource getPendingResource() {
         return pendingResource;
     }
 
-   
+
     public void setFood(int food) {
         this.food = Math.min(food, 50);
     }

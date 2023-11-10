@@ -24,6 +24,6 @@ public class PendingMaterial extends PendingResource {
     }
 
     public String toString() {
-        return super.toString() + " material";
+        return "(Material " + super.toString() + ")";
     }
 }
