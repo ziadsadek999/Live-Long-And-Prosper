@@ -8,6 +8,7 @@ import code.strategies.BreadthFirstSearch;
 import code.strategies.*;
 import code.strategies.IterativeDeepeningSearch;
 
+import java.io.PrintWriter;
 import java.util.*;
 
 public class LLAPSearch {
@@ -26,11 +27,11 @@ public class LLAPSearch {
     private static Strategy strategy;
     private static List<Action> actions;
     public static final int MAX_COST = 100000;
-
+    public static PrintWriter writer;
 
     public static String solve(String initialState, String strategy, boolean visualize) {
         parse(initialState);
-
+        writer = new PrintWriter(System.out);
         LLAPSearch.visualise = visualize;
         LLAPSearch.strategy = Strategy.valueOf(strategy);
         Node root = new LLAPNode(initialProsperity, initialFood, initialMaterial, initialEnergy, null, null, null, 0);
@@ -40,12 +41,14 @@ public class LLAPSearch {
         Node goal = genericSearchAlgorithm.solve();
 
         if (goal == null) {
-            System.out.println("NOSOLUTION");
+            print("NOSOLUTION");
             return "NOSOLUTION";
         }
 
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearchAlgorithm.getNodesExpanded();
         print(result);
+        writer.flush();
+        writer.close();
         return result;
     }
 
@@ -78,7 +81,6 @@ public class LLAPSearch {
             }
         }
 
-//        System.out.println(LLAPSearch.string());
         return genericSearch;
     }
 
@@ -94,7 +96,7 @@ public class LLAPSearch {
 
     public static void print(String string) {
         if (visualise) {
-            System.out.println(string);
+            writer.println(string);
         }
     }
 
@@ -151,21 +153,6 @@ public class LLAPSearch {
         return output;
     }
 
-    public static int getInitialProsperity() {
-        return initialProsperity;
-    }
-
-    public static int getInitialFood() {
-        return initialFood;
-    }
-
-    public static int getInitialMaterial() {
-        return initialMaterial;
-    }
-
-    public static int getInitialEnergy() {
-        return initialEnergy;
-    }
 
     public static int getFoodPrice() {
         return foodPrice;
@@ -177,14 +164,6 @@ public class LLAPSearch {
 
     public static int getEnergyPrice() {
         return energyPrice;
-    }
-
-    public static boolean getVisualise() {
-        return visualise;
-    }
-
-    public static Strategy getStrategy() {
-        return strategy;
     }
 
     public static List<Action> getActions() {
