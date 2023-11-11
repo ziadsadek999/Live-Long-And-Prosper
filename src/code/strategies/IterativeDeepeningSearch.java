@@ -34,7 +34,7 @@ public class IterativeDeepeningSearch extends GenericSearch {
             NodeWithDepth nodeWithDepth = stack.pop();
             Node currentNode = nodeWithDepth.node;
             int currentDepth = nodeWithDepth.depth;
-            LLAPSearch.print("Current Node: " + currentNode);
+           // LLAPSearch.print("Current Node: " + currentNode);
             if (currentNode.isGoal()) {
                 LLAPSearch.print("Goal Reached!");
                 return currentNode;

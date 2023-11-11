@@ -21,7 +21,7 @@ public class DepthFirstSearch extends GenericSearch {
         stack.push(root);
         while (!stack.isEmpty()) {
             Node node = stack.pop();
-            LLAPSearch.print("Current Node: " + node);
+           // LLAPSearch.print("Current Node: " + node);
             if (node.isGoal()) {
                 LLAPSearch.print("Goal Reached!");
                 return node;
