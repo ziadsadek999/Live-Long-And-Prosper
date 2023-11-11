@@ -29,7 +29,7 @@ public class LLAPNode extends Node {
     }
 
     public String toString() {
-        return "\nProsperity: " + prosperity + "\nFood: " + food + "\nMaterial: " + material + "\nEnergy: " + energy + "\nPendingResource: " + pendingResource + "\nCost: " + getCost() + "\n-------------------------";
+        return "-------------------------\nProsperity: " + prosperity + "\nFood: " + food + "\nMaterial: " + material + "\nEnergy: " + energy + "\nPendingResource: " + pendingResource + "\nCost: " + getCost() + "\n-------------------------";
     }
 
 

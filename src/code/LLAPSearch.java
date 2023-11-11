@@ -46,6 +46,7 @@ public class LLAPSearch {
         }
 
         String result = getPlan(goal) + ";" + goal.getCost() + ";" + genericSearchAlgorithm.getNodesExpanded();
+        visualize(goal);
         print(result);
         writer.flush();
         writer.close();
@@ -92,6 +93,30 @@ public class LLAPSearch {
             currNode = currNode.getParent();
         }
         return path.toString().substring(0, path.length() - 1);
+    }
+
+    public static List<Node> getPath(Node goal){
+        LinkedList<Node> path = new LinkedList<>();
+        Node currNode = goal;
+        while(currNode!=null){
+            path.addFirst(currNode);
+            currNode = currNode.getParent();
+        }
+        return path;
+    }
+
+    public static void visualize (Node goal){
+        if(visualise){
+            List<Node> path = getPath(goal);
+            for(Node node: path){
+                if(node.getOperation()!=null){
+                    print("   |");
+                    print(node.getOperation());
+                    print("   |");
+                }
+                print(node.toString());
+            }
+        }
     }
 
     public static void print(String string) {
