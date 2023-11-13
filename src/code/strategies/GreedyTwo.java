@@ -18,10 +18,10 @@ public class GreedyTwo extends GenericSearch {
         if (o.isGoal()) return 0;
         int remProsperity = (100 - ((LLAPNode) o).getProsperity());
 
-        Build Build1 = (Build) LLAPSearch.getActions().get(0);
+        Build Build1 = (Build) LLAPSearch.getActions().get(5);
         float cost1 = (remProsperity * 1f / Build1.getProsperity()) * Build1.getCost();
 
-        Build Build2 = (Build) LLAPSearch.getActions().get(1);
+        Build Build2 = (Build) LLAPSearch.getActions().get(4);
         float cost2 = (remProsperity * 1f / Build2.getProsperity()) * Build2.getCost();
 
         return Math.min(cost1, cost2);
