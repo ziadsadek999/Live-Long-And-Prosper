@@ -49,7 +49,6 @@ public class LLAPSearch {
         visualize(goal);
         print(result);
         writer.flush();
-        writer.close();
         return result;
     }
 
